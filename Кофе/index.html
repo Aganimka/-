@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Coffee</title>
+	<link rel="stylesheet" href="static/styles/style.css" />
+</head>
+
+<body>
+	<h1>Coffee Blog</h1>
+	<form>
+		<div>
+			<label for="title">Название напитка</label>
+			<input type="text" id="name" name="title" placeholder="Американо" />
+			<br />
+			<label for="sort">Сорт кофе</label>
+			<select name="sort" id="sort">
+				<option>Гвантамала</option>
+				<option>Арабика</option>
+				<option>Марагоджип</option>
+			</select>
+			<br />
+			<label for="strong">Крепость обжарки</label>
+			<div class="radio-group">
+				<label>
+					<input type="radio" id="strong" name="strong" value="Крепкая" />
+					<b>Крепкая</b>
+				</label>
+				<label>
+					<input type="radio" id="middle" name="strong" value="Средняя" />
+					<b>Средняя</b>
+				</label>
+				<label>
+					<input type="radio" id="lite" name="strong" value="Легкая" />
+					<b>Легкая</b>
+				</label>
+				<br />
+				<label for="image">Ссылка на изображение</label>
+				<input type="text" id="image" name="image" placeholder="Введите URL изображения" />
+				<br />
+				<label for="cost">Стоимость напитка</label>
+				<input type="text" id="cost" name="cost" placeholder="Стоимость" />
+				<br />
+				<label for="description">Описание</label>
+				<textarea name="description" id="description"></textarea>
+				<br />
+				<input type="submit" value="Добавить напиток" />
+			</div>
+	</form>
+	<br />
+	<table id="table">
+		<tr>
+			<thead>
+				<th>Изображение</th>
+				<th>Название</th>
+				<th>Сорт</th>
+				<th>Крепость обжарки</th>
+				<th>Стоимость</th>
+				<th>Описание</th>
+			</thead>
+		</tr>
+		<tbody></tbody>
+	</table>
+	<input type="reset" value="Очистить ">
+	</div>
+</body>
+<script src="index.js"></script>
+
+</html>
