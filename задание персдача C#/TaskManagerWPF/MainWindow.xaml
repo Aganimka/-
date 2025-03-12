@@ -1,0 +1,25 @@
+﻿<Window x:Class="TaskManagerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Task Manager" Height="350" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Описание задачи:" />
+            <TextBox x:Name="TaskDescription" />
+            
+            <TextBlock Text="Дата выполнения:" Margin="0,10,0,0" />
+            <DatePicker x:Name="TaskDatePicker" />
+            
+            <Button Content="Добавить задачу" Click="AddTask_Click" Margin="0,10,0,0" />
+            
+            <ListView x:Name="TaskListView" Margin="0,10,0,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Задача" DisplayMemberBinding="{Binding Description}" Width="200" />
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding DueDate}" Width="100" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
